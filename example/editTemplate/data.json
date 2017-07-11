@@ -1,0 +1,8 @@
+[
+    {
+        "id": "001",
+        "name": "标题样式一",
+        "img": "img/tpl-demo-001.png",
+        "html": "<div style=\"padding: 3px 10px; font-weight:bold; border-left: 5px green solid\">这里输入标题</div>"
+    }
+]

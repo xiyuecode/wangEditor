@@ -46,6 +46,27 @@
     <script type="text/javascript">
         var E = window.wangEditor
         var editor2 = new E('#div3')
+
+        //配置菜单测试
+        editor2.customConfig.menus = [
+            'head',
+            'bold',
+            'italic',
+            'underline',
+            'strikeThrough',
+            'foreColor',
+            'backColor',
+            'link',
+            'list',
+            'justify',
+            'quote',  // 引用
+            'image',  // 插入图片
+            'table',  // 表格
+            'video',  // 插入视频
+            'template'
+        ];
+
+
         editor2.create()
     </script>
 </body>

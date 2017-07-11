@@ -97,7 +97,10 @@ const config = {
         timeout: function (xhr, editor) {
             // 图片上传超时时触发
         }
-    }
+    },
+
+    //配置模板路径
+    template: '/editTemplate'
 }
 
 export default config

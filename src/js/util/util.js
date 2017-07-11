@@ -65,3 +65,33 @@ export function percentFormat(number) {
     return number + '%'
 }
 
+//XmlHttpRequest对象      
+function createXmlHttpRequest(){      
+    //if(window.ActiveXObject){ //如果是IE浏览器      
+    //    return new ActiveXObject('Microsoft.XMLHTTP')
+    //}else if(window.XMLHttpRequest){ //非IE浏览器      
+    return new XMLHttpRequest()
+    //}      
+}  
+
+// 请求ajax
+export function ajax(options){
+
+    options = options||{
+        type: 'GET'
+    }
+
+    var xmlHttpRequest = createXmlHttpRequest()
+    xmlHttpRequest.open(options.type, options.url, true)
+    xmlHttpRequest.onreadystatechange = function(){  
+        if(xmlHttpRequest.readyState == 4){  
+            if(xmlHttpRequest.status == 200){  
+                options.success && options.success(xmlHttpRequest.responseText)
+            }else{  
+                options.error && options.error()
+            }  
+        }  
+    }
+
+    xmlHttpRequest.send(options.data)
+}

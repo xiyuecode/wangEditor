@@ -329,6 +329,13 @@
   color: #333;
 }
 
+.template-list {
+  list-style-type: none;
+}
+.template-list .tpl-demo {
+  cursor: pointer;
+}
+
 .w-e-text-container {
   position: relative;
 }
